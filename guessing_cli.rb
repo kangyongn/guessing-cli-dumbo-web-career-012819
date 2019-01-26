@@ -1,7 +1,7 @@
 require "pry"
 def run_guessing_game
   while true
-    answer = rand(1..6)
+    answer = rand(1..6).to_s
     puts "Guess a number between 1 and 6."
     guess = gets.chomp
     case guess
