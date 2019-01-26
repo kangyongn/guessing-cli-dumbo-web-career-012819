@@ -3,10 +3,11 @@ def run_guessing_game
     answer = rand(1..6)
     puts "Guess a number between 1 and 6."
     guess = gets.chomp
-    if answer == guess.to_i
+    case guess
+    when answer
       puts "You guessed the correct number!"
       break
-    elsif guess == "exit"
+    when "exit"
       puts "Goodbye!"
       break
     else
