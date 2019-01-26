@@ -1,10 +1,11 @@
 def run_guessing_game
   while true
     answer = rand(1..6)
+    answer.to_i!
     puts "Guess a number between 1 and 6."
     guess = gets.chomp
     case guess
-    when answer.to_s
+    when answer
       puts "You guessed the correct number!"
       break
     when "exit"
